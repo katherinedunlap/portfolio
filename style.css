@@ -6,7 +6,7 @@ body {
     color: black;
     font-family: 'Arapey', serif;
     font-size: 18px;
-    margin-left: 20px;
+    margin: 1em;
 }
 
 p {
@@ -19,17 +19,18 @@ p {
 h1 { 
     font-family: 'DM Sans', sans-serif;   
     font-weight:bolder ;
-    font-size: 3em;
+    font-size: 2.75em;
     line-height: .25;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 0;
+    margin-top: 0;
 }
 
 h2 { 
     font-family: 'DM Sans', sans-serif;   
     font-size: 1.5em;
     font-weight: 100;
-    line-height: 1.25;
+    line-height: 1.0;
     text-align: center;
 }
 
@@ -41,17 +42,17 @@ h3 {
 
 h4 { 
     font-family: 'DM Sans', sans-serif; 
-    margin-bottom: 10px;
+    margin-bottom: .5em;
 }
 
 ul{
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: .5em;
 }
 
 li{
     margin-top: 0px;
-    margin-bottom: 10px;
+    margin-bottom: .5em;
 }
 
 .no-line-height {
@@ -65,26 +66,44 @@ li{
 }
 
 .navigation-bar {
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    overflow: hidden;
-    background-color: darkgray;
+  display: flex;
+  align-items: left;
+  background: whitesmoke;
+  padding: 0;
+  position: relative;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
 }
-    .navigation-bar li {
-        float:right;
-    }
-    .navigation-bar li a {
-        display:flexbox;
-        color: white;
-        text-align: center;
-        padding: 15px 15px;
-        text-decoration: none;
-        font-family: 'DM Sans', sans-serif; 
-    }
-    .navigation-bar li a:hover {
-        color: rgb(92, 88, 88);
-    }
+
+.navigation-bar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation-bar > ul{
+    display: flex;
+    justify-content: left;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.navigation-bar > ul > li{
+    position: relative
+}
+
+.navigation-bar > ul > li > a{
+    display: flex;
+    align-items: left;
+    gap: 1em;
+    color: black;
+    text-decoration: none;
+    padding: 1em 1em
+}
+
+.navigation-bar > ul > li > a:hover{
+    color: #00d3fd;
+}
 
 #horizontal-bar{
     border-top: 6px solid black;
@@ -101,8 +120,13 @@ li{
 .gallery-grid{
     max-width: auto;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
+    grid-template-columns: 7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "hd"
+    "main"
+    "ft";
+    gap: 5%
 }
 
 .gallery-grid-style {
@@ -110,9 +134,9 @@ li{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 175px;
-    height: 225px;
-    margin: 20px;
+    width: 12em;
+    height: 15em;
+    margin: 2em;
     padding: 0;
     background-color: darkgray;
     color: white;
@@ -128,9 +152,34 @@ li{
     justify-content: center;
     width: auto;
     height: auto;
-    margin: 20px;
+    margin: .75em;
     color: black;
     font-size: 1.5em;
     font-family: 'DM Sans', sans-serif; 
     font-weight: 400;
+}
+
+
+header { 
+    grid-area: hd; 
+    background: whitesmoke; 
+    color: black;
+    padding-top: 3em; 
+}
+
+main { 
+    grid-area: main; 
+    background: #ffffff; 
+    border-color: #333333;
+    padding: 1em; 
+}
+
+footer { grid-area: ft; 
+    color: black;
+    margin-left: 0;
+    text-align: left;
+    background-color: whitesmoke;
+    font-family: 'DM Sans', sans-serif; 
+    padding: .25em;
+    height: 10%; 
 }
