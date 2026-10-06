@@ -170,7 +170,7 @@ footer { grid-area: ft;
     display: block;
     /* this keeps it from moving contact me over to the side */
     position: absolute;
-    background-color: lightgray;
+    background-color: rgb(202, 197, 197);
     padding: .75em;
 }
 /* controls the hover colors */
