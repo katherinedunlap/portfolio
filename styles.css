@@ -24,7 +24,7 @@ h1 {
     font-size: 2.75em;
     line-height: .25;
     text-align: center;
-    padding-top: 0;
+    padding-top: .5em;
     margin-top: 0;
 }
 
@@ -88,13 +88,14 @@ footer { grid-area: ft;
     margin-inline-start: auto;
     margin-inline-end: auto;
     font-size: .9em;
+    max-width: 800px;
 }
 
-/* controls how the bar itself looks and behaves */
+/* controls how the nav bar itself looks and behaves */
 .navigation-bar {
   display: flex;
   align-items: left;
-  justify-content:space-between;
+  /* justify-content:space-between; */
   background: whitesmoke;
   top: auto;
   position: absolute;
@@ -115,15 +116,15 @@ footer { grid-area: ft;
     padding: 1em;
 }
 
-.navigation-bar > a:hover{
+/* .navigation-bar > a:hover{
     color: #236666;
     text-decoration: none;
-}
+} */
 
 .navigation-bar > ul{
     display: flex;
     align-items: left;
-    gap: 1em;
+    gap: 2em; /*controls the space between the main nav bar items*/
     list-style: none;
     position: absolute;
 }
@@ -141,10 +142,11 @@ footer { grid-area: ft;
     position: relative;
 }
 
-/* controls what the submenu looks like */
+/* controls how the links in the submenu behave and are spaced */
 .navigation-bar > ul > li > ul > li{
-    padding-top: 1em;
-    padding-left: 0em;
+    /* controls the space between the links */
+    padding-top: .5em;
+    padding-bottom: .75em;
     justify-content: space-between;
     list-style: none;
     position: relative;
@@ -165,28 +167,32 @@ footer { grid-area: ft;
     display: none;
 }
 
-/* controls the hover */
+/* controls the hover colors and behavior */
 .navigation-bar > ul > li:hover > ul {
     display: block;
     /* this keeps it from moving contact me over to the side */
     position: absolute;
-    background-color: rgb(218, 215, 215);
-    padding: .75em;
+    background-color: rgb(250, 250, 250);
+    /* controls the space around the links */
+    padding-top: .75em;
+    padding-left: .75em;
+    padding-right: .75em;
 }
 /* controls the hover colors */
 .navigation-bar a:hover {
     color: rgb(44, 4, 156);
 }
 
+/* horizontal bar in page header */
 #horizontal-bar{
-    border-top: 6px solid black;
+    border-top: 3px solid black;
     margin-left: 30%;
     margin-right: 30%;
 }
 
 .gallery-page{
     display:flex;
-    width: 100%;
+    width: auto;
     justify-content: center;
 }
 
@@ -225,7 +231,9 @@ footer { grid-area: ft;
     justify-content: center;
     width: auto;
     height: auto;
+    max-width: 800px;
     margin: .75em;
+    padding: 0em;
     color: black;
     font-size: 1.25em;
     font-family: 'DM Sans', sans-serif; 
