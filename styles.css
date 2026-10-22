@@ -117,11 +117,6 @@ footer { grid-area: ft;
     padding: 1em;
 }
 
-/* .navigation-bar > a:hover{
-    color: #236666;
-    text-decoration: none;
-} */
-
 .navigation-bar > ul{
     display: flex;
     align-items: left;
@@ -226,17 +221,31 @@ footer { grid-area: ft;
 
 
 .homepage-keywords-style {
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    max-width: 800px;
-    margin: .75em;
-    padding: 0em;
-    color: black;
     font-size: 1.25em;
-    font-family: 'DM Sans', sans-serif; 
+    font-family: 'DM Sans', sans-serif;
     font-weight: 300;
+    color: black;
+    white-space: nowrap;
+}
+
+.homepage-keywords-style > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 800px;
+    gap: .5em;
+    padding-left: 0em;
+    list-style-type: none;
+}
+
+.homepage-keywords-style > ul > li{
+    position: relative;
+    padding-left: 2em;
+}
+
+.homepage-keywords-style > ul > li::before{
+    content: "\2022";
+    position: absolute;
+    left: 0;
 }
