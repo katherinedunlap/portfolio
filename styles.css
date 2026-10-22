@@ -219,7 +219,7 @@ footer { grid-area: ft;
     margin: 2em;
     padding: 0;
     background-color: darkgray;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: .75em;
     font-family: 'DM Sans', sans-serif; 
 }
