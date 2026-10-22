@@ -232,20 +232,32 @@ footer { grid-area: ft;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: auto;
     max-width: 800px;
-    gap: .5em;
-    padding-left: 0em;
-    list-style-type: none;
+    padding-top: 1em;
+    margin: auto;
+    /* list-style-position: outside; */
 }
 
 .homepage-keywords-style > ul > li{
-    position: relative;
-    padding-left: 2em;
+    padding-left: 1em;
 }
 
-.homepage-keywords-style > ul > li::before{
+/* .homepage-keywords-style > ul > li:not(:first-child){
+    position: relative;
+    padding-left:6%;
+    margin-bottom: 2em;
+    list-style: none;
+}
+
+.homepage-keywords-style > ul > li:not(:first-child)::before{
     content: "\2022";
     position: absolute;
-    left: 0;
+    left: 0em;
 }
+
+.homepage-keywords-style > ul > li:first-child{
+    position: relative;
+    margin-bottom: 2em;
+    list-style: none;
+    left: -1em;
+} */
