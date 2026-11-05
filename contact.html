@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="CSS/styles.css">
+	<link rel="stylesheet" href="css/styles.css">
 
   <!-- fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +50,29 @@
 <h2>FOR YOUR DESIGN NEEDS</h2>
 </header>
 <main>
+
+<form action="welcome.php" method = "post">
+	<p>
+		<label for="name">Name <sup>*</sup>:</label>
+		<input type="text" id="name" placeholder="Enter your first and last name." name="name" required/>
+	</p>
+	<p>
+		<label for="email">Email <sup>*</sup>:</label>
+		<input type="email"	id="email" placeholder="Provide a valid email address." name="email" required/>
+	</p>
+	<p>
+		<label for="message">Message:</label>
+		<textarea id="message" placeholder="Tell me about your design needs." name="message"></textarea>
+	</p>
+	<p class="button">
+		<button type="submit">Submit</button>
+	</p>
+
+	<p class="requirednote">Note: Required fields are marked with an asterisk *</p>
+	
+</form>
+
+
 </main>
 
 <footer><p class="no-line-height"class="no-line-height">&copy; 2026 Katherine Dunlap</p></footer>
