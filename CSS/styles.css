@@ -282,12 +282,29 @@ footer { grid-area: ft;
     padding-left: 1em;
 }
 
+/* Contact Page Form*/
+
+#intro {
+    max-width: 800px;
+    font-size: .9em;
+    max-width: 800px;
+}
+
+#requirednote {
+    max-width: 800px;
+    font-size: .9em;
+    max-width: 800px;
+    margin-left: 3.0em;
+}
+
 form {
     display: inline-block;
-    padding: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     font-family: 'Inter',sans-serif;
     font-weight: 300;
     font-size: auto; 
+    border: black;
 }
 
 label {
@@ -336,8 +353,27 @@ button {
     padding-left: 100px;
 }
 
-.requirednote {
-    font-size: .75em; 
-    font-weight: 500;
-    margin-left: 8em;
+/* Table contact page */
+
+table {
+    font-family: 'Inter',sans-serif;
+    border-collapse: collapse;
+    width: auto;
+    max-width: 800px;
+    font-size: .9em;
+    max-width: 800px;
+    margin-left: 4.0em;
 }
+
+th {
+    border: 1px solid;
+    text-align: left;
+    padding: .5em;
+}
+
+td{
+    border: 1px solid;
+    text-align: left;
+    padding: .5em;    
+}
+
